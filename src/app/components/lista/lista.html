@@ -1,0 +1,35 @@
+<h1>Elenco Ristoranti</h1>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descrizione</th>
+                <th>Indirizzo</th>
+                <th>Telefono</th>
+                <th>Email</th>
+                <th>Sito web</th>
+                <th>Posizione</th>
+                <th>Azioni</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(ristorante of listaRistoranti; track ristorante.id) {
+                <tr>
+                    <td><a href="/ristorante/{{ ristorante.id }}">{{ ristorante.nome }}</a></td>
+                    <td>{{ ristorante.descrizione }}</td>
+                    <td>{{ ristorante.indirizzo }}</td>
+                    <td>{{ ristorante.telefono }}</td>
+                    <td>{{ ristorante.email }}</td>
+                    <td><a href="{{ ristorante.sito_web }}"> {{ ristorante.sito_web }}</a></td>
+                    <td>{{ ristorante.latitudine }}, {{ ristorante.longitudine }}</td>
+                    <td>
+                        <button class="btn btn-danger" (click)="rimuoviRistorante(ristorante.id)">Rimuovi</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

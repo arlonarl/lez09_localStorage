@@ -1,0 +1,21 @@
+<div class="container mt-4">
+    <h1>{{ ristorante?.nome }}</h1>
+    <p>{{ ristorante?.descrizione }}</p>
+  
+    <div class="card mt-4">
+      <div class="card-body">
+        <h5 class="card-title">Informazioni</h5>
+        <p><strong>Indirizzo:</strong> {{ ristorante?.indirizzo }}</p>
+        <p><strong>Telefono:</strong> {{ ristorante?.telefono }}</p>
+        <p><strong>Email:</strong> {{ ristorante?.email }}</p>
+        <p><strong>Sito web: </strong> <a [href]="ristorante?.sito_web">{{ ristorante?.sito_web }}</a></p>
+      </div>
+    </div>
+  
+    <div class="card mt-4">
+        <div class="card-body">
+          <h5 class="card-title">Posizione</h5>
+          <div id="mappaDettaglio" style="height: 300px;"></div>
+        </div>
+      </div>
+  </div>

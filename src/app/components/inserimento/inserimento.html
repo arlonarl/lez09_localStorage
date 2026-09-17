@@ -1,0 +1,49 @@
+<div class="container mt-4">
+    <h2>Nuovo Ristorante</h2>
+  
+    <form (ngSubmit)="onSubmit()">
+  
+      <div class="mb-3">
+        <label>Nome</label>
+        <input type="text" class="form-control" name="nome" [(ngModel)]="ristorante.nome" required>
+      </div>
+  
+      <div class="mb-3">
+        <label>Descrizione</label>
+        <textarea class="form-control" name="descrizione" [(ngModel)]="ristorante.descrizione"></textarea>
+      </div>
+  
+      <div class="mb-3">
+        <label>Indirizzo</label>
+        <input type="text" class="form-control" name="indirizzo" [(ngModel)]="ristorante.indirizzo">
+      </div>
+  
+      <div class="mb-3">
+        <label>Telefono</label>
+        <input type="text" class="form-control" name="telefono" [(ngModel)]="ristorante.telefono">
+      </div>
+  
+      <div class="mb-3">
+        <label>Sito web</label>
+        <input type="text" class="form-control" name="sito_web" [(ngModel)]="ristorante.sito_web">
+      </div>
+  
+      <div class="mb-3">
+        <label>Email</label>
+        <input type="email" class="form-control" name="email" [(ngModel)]="ristorante.email">
+      </div>
+  
+      <div class="mb-3">
+        <label>Latitudine</label>
+        <input type="number" class="form-control" name="latitudine" [(ngModel)]="ristorante.latitudine">
+      </div>
+  
+      <div class="mb-3">
+        <label>Longitudine</label>
+        <input type="number" class="form-control" name="longitudine" [(ngModel)]="ristorante.longitudine">
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Salva</button>
+  
+    </form>
+  </div>
